@@ -1,5 +1,6 @@
 from pathlib import Path
 from Crypto.Cipher import AES
+import binascii
 #Encryption key: 002233778899ffbc1234567890449955
 '''
 Ciphertext:
@@ -16,11 +17,10 @@ A3678369FF4
 
 def main():
     ciphertext = Path("./ciphertext").read_text()
+    #ciphertext = binascii.unhexlify(ciphertext)
     key = "002233778899ffbc1234567890449955"
-    bytes_object = bytes.fromhex(key)
-    ascii_string = bytes_object.decode("ASCII")
-    print(ascii_string)
-    decipher = AES.new(ascii_string, AES.MODE_ECB)
+    key = binascii.unhexlify(key)
+    decipher = AES.new(key, AES.MODE_ECB)
     print(decipher.decrypt(ciphertext))
 if __name__ == "__main__":
     main()
