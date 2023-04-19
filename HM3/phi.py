@@ -23,15 +23,13 @@ def calculateWithOutPhi(m):#lists the number of coprimes that m has that is a nu
 			print(str(i) + " is coprime with " + str(m))
 	return f
 	
-def calculateWithPhiTotientFunction(m):
 
 def main():
 	print("hello")
 	m = calculateWithOutPhi(10)	
 	print(str(m) + " is the number of coprimes that " + str(10) +  " has without the totient function")
 
-	m = calculateWithPhiTotientFunction(10)
-	print(str(m) + " is the number of coprimes that " + str(10) +  " has with the totient function")
+	
 	
 
 
