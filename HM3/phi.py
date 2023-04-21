@@ -20,7 +20,7 @@ def calculateWithOutPhi(m):#lists the number of coprimes that m has that is a nu
 	for i in range(m, 0, -1):#counting backwards from m
 		if gcd(m, i) == 1:#if the gcd between the two numbers is 1, then they are coprime
 			f = f + 1
-			print(str(i) + " is coprime with " + str(m))
+			#print(str(i) + " is coprime with " + str(m))
 	return f
 	
 
@@ -28,6 +28,13 @@ def main():
 	print("hello")
 	m = calculateWithOutPhi(10)	
 	print(str(m) + " is the number of coprimes that " + str(10) +  " has without the totient function")
+
+	m = calculateWithOutPhi(24)
+	print(str(m) + " is the number of coprimes that " + str(10) +  " has without the totient function")
+
+	m = calculateWithOutPhi(30)
+	print(str(m) + " is the number of coprimes that " + str(10) +  " has without the totient function")
+
 
 	
 	
